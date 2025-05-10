@@ -1,0 +1,15 @@
+{% extends "base.html" %}  
+{% block title %}Home Page{% endblock %}  
+{% block content %}  
+  <h1>Latest Books</h1>  
+  {% for Book in books %}  
+    <div>  
+      <h2>{{ Book.title }}</h2>  
+      <p>{{ Book.author }}</p>  
+      <p>{{ Book.isbn }} </p>
+      <p>{{ Book.published_date|date:"F j, Y" }}  </p>  
+      <p>{{ Book.genre }} </p>
+      <p>{{ Book.is_available }} </p>
+    </div> 
+  {% endfor %}  
+{% endblock %} 
